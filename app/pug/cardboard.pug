@@ -1,0 +1,24 @@
+extends template.pug
+
+block title
+	title Новогодние подарки - Каталог
+
+block banner
+	div.container
+		div.banner-catalog--bg
+		div.banner-catalog
+			h2.banner-catalog__title ВЫБЕРИ СВОЙ
+				br 
+				| УНИКАЛЬНЫЙ ПОДАРОК
+
+block content
+	div.container
+		div.categories--bg
+		div.categories
+			include includes/mixin-catalog.pug
+			include includes/popup-buy.pug
+			include includes/popup-compose.pug
+			+catalog-item('zvezdny_biser', 'Бисер', 'игрушка-конфетница', '1000 гр', '33 см', '1 450 руб')
+			+catalog-item('ulybka_zimy', 'Улыюка', 'игрушка-конфетница', '900 гр', '28 см', '1 150 руб')
+			+catalog-item('v_gostyah_u_skazki', 'Сказка', 'игрушка-конфетница', '900 гр', '30 см', '1 350 руб')
+			+catalog-item('karnavalny_dom', 'Домик', 'игрушка-конфетница', '1100 гр', '27 см', '1 200 руб')

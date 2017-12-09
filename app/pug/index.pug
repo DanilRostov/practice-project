@@ -1,8 +1,28 @@
-<!DOCTYPE html>
-html(lang="en")
-head
-	meta(charset="UTF-8")
-	title Document
-	link(rel="stylesheet", href="css/style.css")
-body
-	h2.title Тест 2
+extends template.pug
+
+block title
+	title Новогодние подарки в СПб
+
+block banner
+	div.container
+		div.banner-main--bg
+		div.banner-main
+			h2.banner-main__title СЛАДКИЕ ПОДАРКИ
+				br 
+				| К НОВОМУ ГОДУ
+
+block content
+	div.container
+		div.main-page-header--bg
+		div.main-page-header
+			h2.main-page-header__title ВЫБЕРИ СВОЙ
+				br
+				| УНИКАЛЬНЫЙ ПОДАРОК
+	div.container
+		div.categories--bg
+		div.categories
+			include includes/mixin-categories.pug
+			+category-left('category1', 'игрушках', 'Для ребёнка нет ничего лучше на праздник, чем игрушка набитая вкусностями. Особенно если они произведены на одной из самых известных кондитерских фабрик России.', 'toys')
+			+category-right('category2', 'мешочках', 'Классический подарок для любого возраста. Нарядные и праздничные мешочки создадут настроение Нового года и порадуют разнообразием конфет.', 'bags')
+			+category-left('category3', 'жести', 'Самые разнообразных формы жестяного корпуса. Это могут быть чемоданчики, машинки, новогодние ведёрки и т.д. Ну и конечно великолепные сладости внутри.', 'tin')
+			+category-right('category4', 'кортоне', 'Яркие и красочные подарки на любую тематику, которые подойдут в качестве корпаротивных подарков, либо для массовых коллективов (школы, дет. сады).', 'cardboard')

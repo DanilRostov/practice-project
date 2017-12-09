@@ -1,0 +1,27 @@
+mixin category-left(name, title, text, link)
+	div.category
+		- var urlLink = '.html'
+		a.category__img-box(href=link + urlLink)
+			- var urlStart = 'img/categories/'
+			- var urlEnd = '.jpg'
+			img(src=src=urlStart + name + urlEnd, alt=name)
+		div.category__info-box
+			h2.category__title Сладости
+				br
+				span.category__subtitle в #{title}
+			p.category__text #{text}
+			a.category__link(href=link + urlLink) Перейти к каталогу
+
+mixin category-right(name, title, text, link)
+	div.category
+		- var urlLink = '.html'
+		a.category__img-box.category__img-box--right(href=link + urlLink)
+			- var urlStart = 'img/categories/'
+			- var urlEnd = '.jpg'
+			img(src=src=urlStart + name + urlEnd, alt=name)
+		div.category__info-box.category__info-box--right
+			h2.category__title.category__title--right Сладости
+				br
+				span.category__subtitle.category__subtitle--right в #{title}
+			p.category__text.category__text--right #{text}
+			a.category__link(href=link + urlLink) Перейти к каталогу

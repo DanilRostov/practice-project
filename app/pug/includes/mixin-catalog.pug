@@ -1,0 +1,15 @@
+mixin catalog-item(name, title, type, weight, height, price)
+	div.category.catalog
+		- var urlLink = '.html'
+		div.category__img-box.catalog__img-box(href=link + urlLink)
+			- var urlStart = 'img/catalog/'
+			- var urlEnd = '.jpg'
+			img(src=src=urlStart + name + urlEnd, alt=name)
+		div.category__info-box.catalog__info-box
+			h2.category__title.catalog__title #{title}
+			span.category__text.catalog__text.catalog__text--first Тип подарка: #{type}
+			span.category__text.catalog__text Вес конфет внутри: #{weight}
+			span.category__text.catalog__text Высота: #{height}
+			span.category__text.catalog__text.catalog__text--price Цена: #{price}
+			btn#btn-compose.category__link.catalog__link.catalog__link--compose Узнать состав
+			btn#btn-buy.category__link.catalog__link.catalog__link--buy Как купить

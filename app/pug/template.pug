@@ -1,0 +1,41 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width" initial-scale="1.0")
+		block title
+		link(rel="stylesheet" href="css/style.css")
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat:400,700|Open+Sans:400,700&amp;subset=cyrillic")
+		// [if IE]> <link rel="shortcut icon" href="img/favicons/favicon.ico"><![endif]
+		link(rel="icon" href="img/favicons/favicon.png" type="image/png")
+		link(rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png")
+	body
+		div.contacts
+			div.contacts__container
+				a.contacts__logo-box(href="index.html")
+					img(src="img/logo.png", alt="logo")
+					span.contacts__logo-text NewYearShop
+				div.contacts__phone-box
+					img(src="img/phone.png", alt="phone")
+					a.contacts__phone-number(href="tel:+79819150166") +7 (981) 915-01-66
+				div.contacts__adress
+					img(src="img/shop.png", alt="shop")
+					div.contacts__adress-box
+						span.contacts__adress-text.contacts__adress-text--big ТЦ «Южный Полюс»
+						br
+						span.contacts__adress-text.contacts__adress-text--small пр-кт Славы 58, 1-ый этаж
+				div.contacts__burger
+					span.contacts__burger-line
+					span.contacts__burger-line
+					span.contacts__burger-line
+		block banner
+		div.navigation
+			div.navigation__container
+				a.navigation__item(href="toys.html") в игрушках
+				a.navigation__item(href="bags.html") в мешочках
+				a.navigation__item(href="tin.html") в жести
+				a.navigation__item(href="cardboard.html") в картоне
+		block content
+		footer.footer
+			span.footer__text Copyright © Данил Ростов, 2017.
+		script(src="js/script.js")

@@ -1,0 +1,24 @@
+extends template.pug
+
+block title
+	title Новогодние мешочки - Каталог
+
+block banner
+	div.container
+		div.banner-catalog--bg
+		div.banner-catalog
+			h2.banner-catalog__title ВЫБЕРИ СВОЙ
+				br 
+				| УНИКАЛЬНЫЙ МЕШОЧЕК
+
+block content
+	div.container
+		div.categories--bg
+		div.categories
+			include includes/mixin-catalog.pug
+			include includes/popup-buy.pug
+			include includes/popup-compose.pug
+			+catalog-item('rozhdestvo', 'Рождество', 'мешочек с конфетами', '1000 гр', '33 см', '1 450 руб')
+			+catalog-item('sjurpriz_ot_tuzika', 'Сюрприз', 'мешочек с конфетами', '900 гр', '28 см', '1 150 руб')
+			+catalog-item('ded_moroz_s_podarkami', 'Путь', 'мешочек-рюкзачек', '900 гр', '30 см', '1 350 руб')
+			+catalog-item('veselyj_dzhek', 'Джек', 'мешочек-рюкзачек', '1100 гр', '27 см', '1 200 руб')
